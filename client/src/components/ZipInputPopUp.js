@@ -5,10 +5,8 @@ import PropTypes from "prop-types";
 import { useHistory } from "react-router-dom";
 
 const ZipInputWindow = styled.div`
-  position: fixed;
-
-  z-index: 2;
-  background: rgb(105, 105, 105, 0.7);
+  position: relative;
+  background: rgb(105, 105, 105, 0.5);
   height: 15rem;
   width: 80%;
   display: flex;
@@ -52,7 +50,7 @@ export const ZipInputPopUp = (props) => {
         onChange={(value) => setQuery(value)}
         placeholder="PLZ Eingabe"
       />
-      <SubmitButton onClick={handleClick} disabled={query.length === !5}>
+      <SubmitButton onClick={handleClick} disabled={query.length === 5}>
         Bestätigen
       </SubmitButton>
     </ZipInputWindow>
